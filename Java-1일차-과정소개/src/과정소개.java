@@ -42,10 +42,10 @@
  * 				--------------------------------------
  * 
  */
-public class 과정소개 {
+public class 과정소개 { 
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub  
+		// TODO Auto-generated method stub
 	}
 
 }
