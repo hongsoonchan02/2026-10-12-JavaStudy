@@ -149,11 +149,13 @@ Java 소스 코드 (A.java)
 
   1. if문
      - 조건이 참일 때만 실행
-    ```text
-    if (score >= 60) {
-      System.out.println("합격")
-    }
-    ```
+       
+```text
+if (score >= 60) {
+System.out.println("합격")
+}
+```
+
   2. if~else문
      - 참과 거짓 중 하나 선택
      ```text
