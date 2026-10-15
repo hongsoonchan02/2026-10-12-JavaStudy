@@ -39,7 +39,7 @@ Java 소스 코드 (A.java)
 
 # 변수의 기본형
 ```text
-  1. 정수형
+  1. 정수 타입
       자료형        크기        저장되는 값의 범위
      - byte     1byte (8bit)     -128 ~ 127
      - char     2byte (16bit)    0 ~ 65,535
@@ -48,7 +48,33 @@ Java 소스 코드 (A.java)
      - long     8byte (64bit)    -9,223,372,036,854,775,808 ~
                                   9,223,372,036,854,775,807
 ```
+```text
+  2. 실수 타입
+      자료형        크기        저장되는 값의 범위
+    - float   4byte (32bit)   1.4E-45 ~ 3.4028235E38
+    - double  8byte (64bit)   4.9E-324 ~ 1.7976931348623157E308
+```
+```text
+  3. 논리 타입
+       자료형        크기        저장되는 값의 범위
+    - boolean  1byte (8bit)       true, false
+```
 
-  2. 실수형
+# 타입 변환
+  1. 자동(묵시적) 타입 변환
+    - 작은 크기의 타입이 큰 크기의 타입에 저장될 때 발생한다.
+     ```text
+       byte(1) < short(2) < int(4) < long(8) < float(4) < double(8)
+       // 단 char는 음수가 저장될 수 없어 byte -> char 자동 변환 불가
+     ```
+
+  2. 강제(명시적) 타입 변환 (Casting)
+    - 큰 타입을 작은 타입으로 쪼개어 저장하는것.
+     ```text
+       int intValue = 103029770;
+       byte byteValue = (byte)intValue;
+     // 결과 : 10 (마지막 1byte만 저장)
+     ```
+
 
  
