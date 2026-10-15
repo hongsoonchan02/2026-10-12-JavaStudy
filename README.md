@@ -169,5 +169,40 @@ System.out.println("미성년자입니다.");
 }
 ```
 
+  3.   다중 조건문 (if~else if~else)
+     - 여러 조건을 순서대로 검사
+
+```text
+int score = 85;
+
+if (score >= 90) {
+    System.out.println("A학점");
+} else if (score >= 80) {
+    System.out.println("B학점");
+} else if (score >= 70) {
+    System.out.println("C학점");
+} else if (score >= 60) {
+    System.out.println("D학점");
+} else {
+    System.out.println("F학점");
+}
+```
+
+```java
+int score = 85;
+
+if (score >= 90) {
+    System.out.println("A학점");
+} else if (score >= 80) {
+    System.out.println("B학점");
+} else if (score >= 70) {
+    System.out.println("C학점");
+} else if (score >= 60) {
+    System.out.println("D학점");
+} else {
+    System.out.println("F학점");
+}
+```
+
 
  
