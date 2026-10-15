@@ -150,7 +150,7 @@ Java 소스 코드 (A.java)
   1. if문
      - 조건이 참일 때만 실행
        
-```text
+```java
 if (score >= 60) {
 System.out.println("합격")
 }
@@ -159,7 +159,7 @@ System.out.println("합격")
   2. if~else문
      - 참과 거짓 중 하나 선택
 
-```text
+```java
 int age = 20;
 
 if (age >= 19) {
@@ -171,22 +171,6 @@ System.out.println("미성년자입니다.");
 
   3.   다중 조건문 (if~else if~else)
      - 여러 조건을 순서대로 검사
-
-```text
-int score = 85;
-
-if (score >= 90) {
-    System.out.println("A학점");
-} else if (score >= 80) {
-    System.out.println("B학점");
-} else if (score >= 70) {
-    System.out.println("C학점");
-} else if (score >= 60) {
-    System.out.println("D학점");
-} else {
-    System.out.println("F학점");
-}
-```
 
 ```java
 int score = 85;
