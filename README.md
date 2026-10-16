@@ -147,7 +147,7 @@ byte byteValue = (byte)intValue;
 
 # Chapter04 - 제어문
 
-##조건문
+## 조건문
 1. if문
 - 조건이 참일 때만 실행
        
