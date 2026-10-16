@@ -169,7 +169,7 @@ System.out.println("미성년자입니다.");
 }
 ```
 
-3.   다중 조건문 (if~else if~)
+3.   다중 조건문 (if~else if)
 - 여러 조건을 순서대로 검사
 
 ```java
