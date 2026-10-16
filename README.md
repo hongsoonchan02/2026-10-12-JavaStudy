@@ -73,13 +73,13 @@ byte(1) < short(2) < int(4) < long(8) < float(4) < double(8)
 // 단 char는 음수가 저장될 수 없어 byte -> char 자동 변환 불가
 ```
 
-  2. 강제(명시적) 타입 변환 (Casting)
+2. 강제(명시적) 타입 변환 (Casting)
 - 큰 타입을 작은 타입으로 쪼개어 저장하는것.
-  ```text
-  int intValue = 103029770;
-  byte byteValue = (byte)intValue;
-  // 결과 : 10 (마지막 1byte만 저장)
-  ```
+```text
+int intValue = 103029770;
+byte byteValue = (byte)intValue;
+// 결과 : 10 (마지막 1byte만 저장)
+```
 
 # 3일차
 
