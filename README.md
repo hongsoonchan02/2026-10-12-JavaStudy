@@ -153,7 +153,7 @@ byte byteValue = (byte)intValue;
        
 ```java
 if (score >= 60) {
-System.out.println("합격")
+    System.out.println("합격")
 }
 ```
 
@@ -164,9 +164,9 @@ System.out.println("합격")
 int age = 20;
 
 if (age >= 19) {
-System.out.println("성인입니다.");
+    System.out.println("성인입니다.");
 } else {
-System.out.println("미성년자입니다.");
+    System.out.println("미성년자입니다.");
 }
 ```
 
