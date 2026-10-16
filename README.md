@@ -1,4 +1,4 @@
-# 1일차 -Java 기초
+# Chapter01 -Java 기초
 
 ## 자바의 특징
 - 이식성이 좋다 (모든 운영체제에서 실행이 가능)
@@ -31,7 +31,7 @@ Java 소스 코드 (A.java)
       프로그램 실행
 ```
 
-# 2일차 - 변수
+# Chapter02 - 변수
 
 ## 변수
 - 한개의 데이터를 저장하는 메모리 공간
@@ -81,7 +81,7 @@ byte byteValue = (byte)intValue;
 // 결과 : 10 (마지막 1byte만 저장)
 ```
 
-# 3일차 - 연산자
+# Chapter03 - 연산자
 
 ## 연산자
 1. 산술 연산자 (계산)
@@ -145,8 +145,9 @@ byte byteValue = (byte)intValue;
 |---|---|---|---|
 | `? :` | 조건이 참이면 첫 번째 값, 거짓이면 두 번째 값 선택 | `10 > 5 ? "참" : "거짓"` | `"참"` |
 
-## 조건문
+# Chapter04 - 제어문
 
+##조건문
 1. if문
 - 조건이 참일 때만 실행
        
@@ -169,7 +170,7 @@ System.out.println("미성년자입니다.");
 }
 ```
 
-3.   다중 조건문 (if~else if)
+3. 다중 조건문 (if~else if)
 - 여러 조건을 순서대로 검사
 
 ```java
@@ -185,6 +186,30 @@ if (score >= 90) {
     System.out.println("D학점");
 } else {
     System.out.println("F학점");
+}
+```
+
+4. 중첩 if문
+- 조건 안에 또 다른 조건 검사
+
+```java
+if (age >=20) {
+    if (ticket) {
+        System.out.println("입장 가능");
+    }
+}
+```
+
+5. switch문
+- 값이 일치하는 경우 실행
+
+```java
+switch (menu) {
+    case 1: System.out.println("커피");
+        break;
+    case 2: System.out.println("주스");
+        break;
+    default: System.out.println("물");
 }
 ```
 
