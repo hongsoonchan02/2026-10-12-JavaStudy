@@ -8,7 +8,7 @@
 
 ## 주의점
 - 모든 프로그램은 main()을 필요로 한다.
-- public 클래스명과 파일명이 동일해야 한다. ex) publci class Main -> Main.java
+- public 클래스명과 파일명이 동일해야 한다. ex) public class Main -> Main.java
 - 클래스명, 변수명 등에는 가급적 한글을 사용하지 않는다.
 
 ## 주석
