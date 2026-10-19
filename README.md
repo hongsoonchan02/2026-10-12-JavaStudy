@@ -213,5 +213,47 @@ switch (menu) {
 }
 ```
 
+java 12 이후부터는  switch문에서 Expressions를 사용할 수 있다
+```java
+switch (menu) {
+    case 'A', 'a' -> {
+          System.out.println("우수 회원입니다.");
+    }
+    case 'B', 'b' -> {
+          System.out.println("일반 회원입니다.");
+    }
+    case 'C', 'c' -> {
+          System.out.println("손님입니다.");
+    }
+```
+
+## 반복문
+
+1. for 문
+- 반복 횟수가 정해져 있을 때
+```java
+for (int i = 1; i <= 100; i++) {
+    sum = sum + i;
+}
+System.out.println(sum);
+```
+
+2. while 문
+- 조건을 먼저 검사할 때
+```java
+while (i <= 5) {
+    System.out.println(i);
+    i++;
+}
+```
+
+3. do~while 문
+- 최소 한 번은 실행해야 할 때
+```java
+do {
+    System.out.println(i);
+} while (i <= 5);
+```
+
 
  
