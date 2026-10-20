@@ -24,7 +24,7 @@ public class 반복문_do_while_1 {
 			System.out.print(c + " ");
 			c++;
 		} while (c <= 'Z');
-
+   
 		System.out.println("\n====== 뒤에서 부터 출력 =======");
 		c = 'Z';
 		do {
