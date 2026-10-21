@@ -41,7 +41,7 @@ public class 문자열_1 {
 //		
 //		String msg = "Hello Java";
 //		
-//		System.out.println(msg.charAt(6));
+//		System.out.println(msg.charAt(6));    
 //		System.out.println(msg.length());
 //		
 //		int count = 0;
