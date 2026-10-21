@@ -255,5 +255,83 @@ do {
 } while (i <= 5);
 ```
 
+## 반복제어문
+
+1. break
+- 현재 반복문을 즉시 빠져나온다
+```java
+for(int i=1; i<=5; i++) {
+   if(i==3) {
+      break; // i가 3이면 반복문 종료
+   }
+   System.out.println(i);
+}
+System.out.println("종료")
+```
+
+2. continue
+- 현재 반복의 남은 코드를 건너뛰고 다음 반복으로 넘어갑니다.
+```java
+for(int i=1; i<=5; i++) {
+   if(i==3) {
+      continue; // i가 3이면 건너뛰기
+   }
+   System.out.println(i);
+}
+```
+
+3. label break;
+- label을 지정하고, 해당 label이 붙은 반복문 전체를 빠져나온다.
+```java
+outer:
+for(int i=1; i<=3; i++) {
+    for(int j=1; j<=3; j++) {
+        System.out.println(i + "." + j);
+
+        if(i==2 && j==2) {
+            break outer; // outer 반복문 종료
+        } 
+    }
+}
+```
+
+## 문자열 (String)
+
+ - String은 한번 생성되면 내용이 변하지 않는 '불변(Immutable)' 객체이다
+```text
+String s = "Java"를 생성한 후
+s = "Python"을 작성해도 "Java"는 사라지지 않는다.
+"Java" 객체는 남아있고 새로운 s = "Python" 객체가 생성된다.
+```
+ - String 문자열 값 비교는 '==' 대신 'equals()' 사용
+```text
+String s = "Java";
+String ss = "Java";
+boolean b = s == ss; 는 true이지만
+
+String s = "Java";
+String ss = new String("java");
+boolean b = s == ss; 는 false
+boolean b = s.equals(ss); 는 true이다.
+
+== 메모리 주소를 비교하고 'equals()'는 실제 문자열 내용값을 비교한다.
+```
+
+## 배열
+
+- 배열이란? 배열은 같은 자료형의 데이터를 여러 개 저장할 수 있는 자료구조이다.
+
+- 주요 목적
+  1. 여러 데이터 관리 (예: 점수, 이름, 상품 등)
+  2. 반복 처리 (for문, for-each문)
+  3. 데이터 검색과 정렬 (특정 값 찾기, 최댓값 구하기 등)
+  4. 데이터 전달과 복사 (메서드에 전달, 데이터 분리)
+  5. 자료구조 학습의 기초 (ArrayList, 컬렉션, DTO 등)
+ 
+- 배열 구조와 메모리 저장
+
+
+
+
 
  
