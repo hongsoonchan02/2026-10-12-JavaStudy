@@ -22,6 +22,7 @@ public class 문자열_4 {
 		String path = "c:\\javaDev\\MainClass.java";
 		System.out.println(path.substring(path.lastIndexOf("\\") + 1));
 		System.out.println(path.lastIndexOf("\\"));
+	
 		
 
 	}
