@@ -1,5 +1,5 @@
 <details> 
-<summary># Chapter01 -Java 기초</summary>
+<summary> #Chapter01 -Java 기초</summary>
 
 ## 자바의 특징
 - 이식성이 좋다 (모든 운영체제에서 실행이 가능)
@@ -32,6 +32,7 @@ Java 소스 코드 (A.java)
       프로그램 실행
 ```
 </details>
+
 # Chapter02 - 변수
 
 ## 변수
