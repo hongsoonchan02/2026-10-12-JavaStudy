@@ -1,5 +1,5 @@
 <details> 
-<summary> #Chapter01 -Java 기초</summary>
+<summary><h3>Chapter01 -Java 기초</h3></summary>
 
 ## 자바의 특징
 - 이식성이 좋다 (모든 운영체제에서 실행이 가능)
