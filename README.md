@@ -332,6 +332,13 @@ boolean b = s.equals(ss); 는 true이다.
 
 
 
+<details>
+  <summary>여기를 클릭하면 펼쳐집니다</summary>
 
+  - 접혀 있는 내용 1
+  - 접혀 있는 내용 2
+  - 접혀 있는 내용 3
+
+</details>
 
  
