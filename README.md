@@ -342,6 +342,7 @@ boolean b = s.equals(ss); 는 true이다.
 ```
 
 - 문자열 제어 메소드
+```text
     1. equals() : 문자열 자체 비교, 대소문자 구분됨
     2. length() : 문자열의 갯수
     3. indexOf() / lastIndexOf() => 지정한 문자의 index번호를 반환 찾는 문자열 없는경우 -1 반환
@@ -358,6 +359,7 @@ boolean b = s.equals(ss); 는 true이다.
     14. subString() : 문자열을 자르는 경우에 사용된다.
     15. subString(int start) : 인덱스 번호가 start부터 나머지 전체
     16. subString(int start, int end) : 인덱스 번호가 start부터 시작 end -1까지
+```
         
 ## 배열
 
@@ -371,9 +373,11 @@ boolean b = s.equals(ss); 는 true이다.
   4. 고정된 크기 => 메모리의 사용량을 예측 = 메모리 관리가 쉽다.
 ```
 - 단점
+```text
   1. 고정된 크기 => 추가, 삭제시에 어렵다 (비용이 많이 투자)
   2. 메모리 낭비 => 크게 만들면 사용이 안되는 메모리가 존재할 수 있다.
   3. 같은 데이터형만 저장된다. => 유연성이 떨어진다.
+```
 
 - 주요 목적
   1. 여러 데이터 관리 (예: 점수, 이름, 상품 등)
