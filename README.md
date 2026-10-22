@@ -1,5 +1,5 @@
 <details> 
-<summary><h1>Chapter01 -Java 기초</h1></summary>
+<summary><h2>Chapter01 -Java 기초</h2></summary>
 
 ## 자바의 특징
 - 이식성이 좋다 (모든 운영체제에서 실행이 가능)
@@ -34,7 +34,7 @@ Java 소스 코드 (A.java)
 </details>
 
 <details>
-<summary><h1>Chapter02 - 변수</h1></summary>
+<summary><h2>Chapter02 - 변수</h2></summary>
 
 ## 변수
 - 한개의 데이터를 저장하는 메모리 공간
@@ -86,7 +86,7 @@ byte byteValue = (byte)intValue;
 </details>
 
 <details>
-<summary><h1>Chapter03 - 연산자</h1></summary>
+<summary><h2>Chapter03 - 연산자</h2></summary>
 
 ## 연산자
 1. 산술 연산자 (계산)
@@ -152,7 +152,7 @@ byte byteValue = (byte)intValue;
 </details>
 
 <details>
-<summary><h1>Chapter04 - 제어문</h1></summary>
+<summary><h2>Chapter04 - 제어문</h2></summary>
 
 ## 조건문
 1. if문
