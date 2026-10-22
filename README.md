@@ -303,6 +303,8 @@ for(int i=1; i<=3; i++) {
 ```
 </details>
 
+<details>
+<summary><h2>Chapter05-참조타입</h2></summary>
 ## 문자열 (String)
 
  - String은 한번 생성되면 내용이 변하지 않는 '불변(Immutable)' 객체이다
@@ -337,3 +339,5 @@ boolean b = s.equals(ss); 는 true이다.
   5. 자료구조 학습의 기초 (ArrayList, 컬렉션, DTO 등)
  
 - 배열 구조와 메모리 저장
+  
+</details>
