@@ -1,4 +1,5 @@
-# Chapter01 -Java 기초
+<details> 
+<summary># Chapter01 -Java 기초</summary>
 
 ## 자바의 특징
 - 이식성이 좋다 (모든 운영체제에서 실행이 가능)
@@ -30,7 +31,7 @@ Java 소스 코드 (A.java)
           ▼
       프로그램 실행
 ```
-
+</details>
 # Chapter02 - 변수
 
 ## 변수
@@ -329,14 +330,3 @@ boolean b = s.equals(ss); 는 true이다.
   5. 자료구조 학습의 기초 (ArrayList, 컬렉션, DTO 등)
  
 - 배열 구조와 메모리 저장
-
-
-
-  <summary>여기를 클릭하면 펼쳐집니다</summary>
-
-  - 접혀 있는 내용 1
-  - 접혀 있는 내용 2
-  - 접혀 있는 내용 3
-
-
- 
