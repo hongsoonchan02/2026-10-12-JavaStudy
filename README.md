@@ -33,7 +33,8 @@ Java 소스 코드 (A.java)
 ```
 </details>
 
-# Chapter02 - 변수
+<details>
+<summary><h1>Chapter02 - 변수</h1></summary>
 
 ## 변수
 - 한개의 데이터를 저장하는 메모리 공간
@@ -82,8 +83,10 @@ int intValue = 103029770;
 byte byteValue = (byte)intValue;
 // 결과 : 10 (마지막 1byte만 저장)
 ```
+</details>
 
-# Chapter03 - 연산자
+<details>
+<summary><h1>Chapter03 - 연산자</h1></summary>
 
 ## 연산자
 1. 산술 연산자 (계산)
@@ -146,8 +149,10 @@ byte byteValue = (byte)intValue;
 | 연산자 | 설명 | 예시 | 결과 |
 |---|---|---|---|
 | `? :` | 조건이 참이면 첫 번째 값, 거짓이면 두 번째 값 선택 | `10 > 5 ? "참" : "거짓"` | `"참"` |
+</details>
 
-# Chapter04 - 제어문
+<details>
+<summary><h1>Chapter04 - 제어문</h1></summary>
 
 ## 조건문
 1. if문
@@ -296,6 +301,7 @@ for(int i=1; i<=3; i++) {
     }
 }
 ```
+</details>
 
 ## 문자열 (String)
 
