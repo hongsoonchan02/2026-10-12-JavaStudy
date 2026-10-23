@@ -4,11 +4,11 @@
 ## 자바의 특징
 - 이식성이 좋다 (모든 운영체제에서 실행이 가능(.class) 바이트 코드) 단, JVM 자체는 OS 종속적이다.
 - 자동 메모리 해제 (가비지 컬렉션)
-- 객체 지향 프로그램 : 조립식 ex) 메인보드
+- 객체 지향 프로그램 => 부품화를 통해 재사용성과 유지보수성 향상
 - 풍부한 라이브러리 존재
 
 ## 주의점
-- Java의 엔트리 포인트가 public static void main(String[] args)이다.
+- Java의 진입점이 public static void main(String[] args)이다.
 - public 클래스명과 파일명이 동일해야 한다. ex) public class Main -> Main.java
 - 클래스명, 변수명 등에는 가급적 한글을 사용하지 않는다.
 
