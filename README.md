@@ -360,6 +360,21 @@ boolean b = s.equals(ss); 는 true이다.
     15. subString(int start) : 인덱스 번호가 start부터 나머지 전체
     16. subString(int start, int end) : 인덱스 번호가 start부터 시작 end -1까지
 ```
+
+## 문자열 배열(String Array)
+
+- 여러개의 문자열을 하나의 배열로 관리하는 자료구조입니다.
+
+- 선언과 초기화
+```java
+String[] names = {"민수", "영희", 철수"};
+System.out.println(names[0]); // 민수
+System.out.println(names[1]); // 영희
+System.out.println(names[2]); // 철수
+
+String[] names = new String[30];
+으로 생성했다면 항목은 모두 null로 초기화한다.
+```
         
 ## 배열
 
@@ -431,5 +446,24 @@ System.out.print(arr[1]); 는 20
     2. a.clone() : 전체 배열의 깊은 복사 => 주소가 공유되지 않고 새로운 객체 생성
     3. Arrays.copyOf(기존배열, length) : 기존 배열을 length 크기만큼 복사한다. 크기를 늘리거나 줄이며 복사 가능 => 새로운 객체 생성
     4. System.arraycopy(기존배열, 시작인덱스, 복사할 배열, 시작 인덱스, 복사할 배열의 길이) : 배열의 특정 구간만 덮어쓰기 가능 => 새로운 객체 생성
+```
+
+## 열거형
+
+- 열거형이란?
+- 미리 정해진 상수 목록을 하나의 자료형으로 정리하는 문법이다.
+- 요일, 학년, 주문 상태, 게임 난이도처럼 정해진 값만 사용할 때 유용하다.
+- 정해진 값만 사용할 수 있고 가능한 값이 명확하기 때문에 값을 통제하기 쉽다.
+  
+```java
+enum Season {
+    SPRING, SUMMER, AUTUMN, WINTER
+}
+
+public class Main {
+    public static void main(Stroing[] args) {
+        Season today = Season.SUMMER;
+        System.out.println(today); // SUMMER
+}
 ```
 </details>
