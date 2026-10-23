@@ -23,7 +23,7 @@ public class 배열_4 {
 			
 			System.out.print(c + " ");
 			
-		}
+		}   
 
 	}
 
