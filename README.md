@@ -369,7 +369,7 @@ boolean b = s.equals(ss); 는 true이다.
     9. endsWith() : 뒤의 문자열이 같은 경우 조회
     10. contains() : 문자열을 포함하는 경우 조회
     11. valueOf() : 모든 데이터형을 문자열로 변경
-    12. format() : 형식에 맞게 문자열 변환 printf와 같다.
+    12. format() : 형식에 맞게 문자열 변환
     13. split() : 지정된 문자를 잘라서 배열에 저장
     14. subString() : 문자열을 자르는 경우에 사용된다.
     15. subString(int start) : 인덱스 번호가 start부터 나머지 전체
