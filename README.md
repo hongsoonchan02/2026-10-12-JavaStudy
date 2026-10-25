@@ -175,7 +175,7 @@ byte byteValue = (byte)intValue;
        
 ```java
 if (score >= 60) {
-    System.out.println("합격")
+    System.out.println("합격");
 }
 ```
 
@@ -254,6 +254,7 @@ switch (menu) {
 1. for 문
 - 반복 횟수가 정해져 있을 때
 ```java
+int sum = 0;
 for (int i = 1; i <= 100; i++) {
     sum = sum + i;
 }
@@ -273,6 +274,7 @@ for(int num : numbers) {
 2. while 문
 - 조건을 먼저 검사할 때
 ```java
+int i = 1;
 while (i <= 5) {
     System.out.println(i);
     i++;
@@ -284,6 +286,7 @@ while (i <= 5) {
 ```java
 do {
     System.out.println(i);
+    i++;
 } while (i <= 5);
 ```
 
@@ -298,7 +301,7 @@ for(int i=1; i<=5; i++) {
    }
    System.out.println(i);
 }
-System.out.println("종료")
+System.out.println("종료");
 ```
 
 2. continue
@@ -332,7 +335,10 @@ for(int i=1; i<=3; i++) {
 <summary><h2>Chapter05-참조타입</h2></summary>
           
 ## 참조타입 저장 방법
-Stack에 변수의 주소가 저장되고 Heap에 변수의 실제 데이터가 저장된다.
+- 기본형 변수는 실제 값을 저장한다.
+- 참조형 변수는 객체를 가르키는 참조값을 저장한다.
+- 일반적으로 지역 변수는 스텍(Stack)에서 관리되고, 생성된 객체와 배열은 힙(Heap) 영역에서 관린된다.
+- 참조변수의 저장된 값은 객체의 실제 메모리 주소와 반드시 동일한 것은 아니다.
           
 ## 문자열 (String)
 
@@ -349,7 +355,7 @@ String ss = "Java";
 boolean b = s == ss; 는 true이지만
 
 String s = "Java";
-String ss = new String("java");
+String ss = new String("Java");
 boolean b = s == ss; 는 false
 boolean b = s.equals(ss); 는 true이다.
 
@@ -371,9 +377,9 @@ boolean b = s.equals(ss); 는 true이다.
     11. valueOf() : 모든 데이터형을 문자열로 변경
     12. format() : 형식에 맞게 문자열 변환
     13. split() : 지정된 문자를 잘라서 배열에 저장
-    14. subString() : 문자열을 자르는 경우에 사용된다.
-    15. subString(int start) : 인덱스 번호가 start부터 나머지 전체
-    16. subString(int start, int end) : 인덱스 번호가 start부터 시작 end -1까지
+    14. substring() : 지정한 인덱스 범위의 문자열을 반환
+    15. substring(int start) : 인덱스 번호가 start부터 나머지 전체
+    16. substring(int start, int end) : 인덱스 번호가 start부터 시작 end -1까지
 ```
 
 ## 문자열 배열(String Array)
@@ -398,7 +404,7 @@ String[] names = new String[30];
 - 장점
 ```text
   1. 빠른 접근 속도 => 인덱스 번호를 이용한다.
-  2. CPU를 자주 사용시에 데이터를 cache에 저장 후 사용이 가능하다.
+  2. 배열은 요소를 연속적인 구조로 관리하므로 순차 접근 시 CPU 캐시 지역성 측면에서 유리할 수 있다.
   3. 간단한 구현 => 배열의 데이터 저장 구조가 단순하다.
   4. 고정된 크기 => 메모리의 사용량을 예측 = 메모리 관리가 쉽다.
 ```
@@ -456,12 +462,11 @@ System.out.print(arr[1]); 는 20
 ```
 
 - 배열 복사 메소드
-```java
-    1. b = a : 주소가 공유되어 한쪽에서 수정하면 같은 주소를 바라보는 변수도 똑같이 수정
-    2. a.clone() : 전체 배열의 깊은 복사 => 주소가 공유되지 않고 새로운 객체 생성
-    3. Arrays.copyOf(기존배열, length) : 기존 배열을 length 크기만큼 복사한다. 크기를 늘리거나 줄이며 복사 가능 => 새로운 객체 생성
-    4. System.arraycopy(기존배열, 시작인덱스, 복사할 배열, 시작 인덱스, 복사할 배열의 길이) : 배열의 특정 구간만 덮어쓰기 가능 => 새로운 객체 생성
-```
+|---|---|---|
+|방법|설명|새 배열 생성|
+|a.Clone()|같은 배열 객체를 참조|X|
+|Arrays.copyOf(a, length)|지정한 길이로 새 배열 생성|O|
+|System.arraycopy()|기존 대상 배열의 지정된 위치에 요소 복사|X|
 
 ## 열거형
 
@@ -476,7 +481,7 @@ enum Season {
 }
 
 public class Main {
-    public static void main(Stroing[] args) {
+    public static void main(Stroing[] args) {          
         Season today = Season.SUMMER;
         System.out.println(today); // SUMMER
 }
