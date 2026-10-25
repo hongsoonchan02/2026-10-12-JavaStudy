@@ -465,7 +465,8 @@ System.out.print(arr[1]); 는 20
 
 | 방법 | 설명 | 새 배열 생성 |
 | --- | --- | --- |
-| a.Clone() | 같은 배열 객체를 참조 | X |
+| b = a | 같은 배열 객체를 참조 | X |
+| a.Clone() | 배열 요소를 복사하는 새 배열 생성 | O |
 | Arrays.copyOf(a, length) | 지정한 길이로 새 배열 생성 | O |
 | System.arraycopy() | 기존 대상 배열의 지정된 위치에 요소 복사 | X |
 
