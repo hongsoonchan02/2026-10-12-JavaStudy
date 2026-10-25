@@ -470,6 +470,11 @@ System.out.print(arr[1]); 는 20
 | Arrays.copyOf(a, length) | 지정한 길이로 새 배열 생성 | O |
 | System.arraycopy() | 기존 대상 배열의 지정된 위치에 요소 복사 | X |
 
+- b = a는 복사가 아니라 참조값을 대입하는 것이다.
+- Clone()과 Arrays.copyOf()는 기본형 배열에서는 값이 복사된다.
+- 참조형 배열에서는 객체 자체가 아니라 참조값이 복사되는 얕은 복사이다.
+- System.arraycopy()는 복사할 대상 배열이 미리 존재해야 한다.          
+
 ## 열거형
 
 - 열거형이란?
@@ -483,7 +488,7 @@ enum Season {
 }
 
 public class Main {
-    public static void main(Stroing[] args) {          
+    public static void main(String[] args) {          
         Season today = Season.SUMMER;
         System.out.println(today); // SUMMER
 }
