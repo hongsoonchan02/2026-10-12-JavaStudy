@@ -44,7 +44,6 @@ public class 열거형 {
 				System.out.println(loc + "의 국번은 " + n.getCode());
 			}
 		}
-
 	}
 
 }
