@@ -332,7 +332,7 @@ for(int i=1; i<=3; i++) {
 </details>
 
 <details>
-<summary><h2>Chapter05-참조타입</h2></summary>
+<summary><h2>Chapter05 - 참조타입</h2></summary>
           
 ## 참조타입 저장 방법
 - 기본형 변수는 실제 값을 저장한다.
@@ -496,7 +496,7 @@ public class Main {
 </details>
 
 <details>
-<summary><h2>Chapter05-메소드</h2></summary>
+<summary><h2>Chapter05 - 메소드</h2></summary>
 
 
 - 특정 기능을 수행하는 코드의 묶음으로, 필요할 때마다 호출하여 사용할 수 있는 재사용 가능한 코드 블록이다.
@@ -550,6 +550,58 @@ int result = Calculator.mutiply(10, 20);
 </details>
 
 <details>
-<summary><h2>Chapter06-객체지향프로그램</h2></summary>
-          
+<summary><h2>Chapter06 - 객체지향프로그램</h2></summary>
+
+##클래스
+
+1. 클래스란?
+- 클래스는 객체를 만들기 위한 설계도이다.
+- 데이터와 기능을 정의하여 같은 형태의 여러 객체를 생성할 수 있다.
+
+2. 클래스의 구조
+```java
+public class Student {
+    // 1. 필드 (Field) ---------------------------> 객체가 가지는 데이터와 상태 / 인스턴스 변수, 정적 변수, 상수 등이 있다.
+    String name; // 인스턴스 변수
+    String int age; // 인스턴스 변수
+    static int count; // 정적 변수
+
+    // 2. 생성자 (Constructor) --------------------> 객체 생성 시 초기화 / 클래스 이름과 동일하게 작성하고 반환형이 없다.
+    Student(String name, int age) {
+    this.name = name;
+    this.age = age;
+    Count++
+    }
+
+    // 3. 메소드 (Method) --------------------------> 객체의 기능과 동작 정의 / 반환형, 매개변수 사용 가능하다.
+    public void introduce() {
+        System.out.println("이름 : " + name + ", 나이 : " + age);
+    }
+    public static int getCount() {
+        return count;
+    }
+}
+```
+
+3. 정적 멤버(static)
+- 객체가 아닌 클래스 자체에 소속되며, 객체 없이 사용 가능하다.
+- 객체.과 클래스. 둘 다 사용 가능하다.
+- 정적 변수 정적 메소드가 있고 여러 객체를 생성하더라도 하나의 값을 공유한다.
+```java
+class Student {
+    String name = "홍순찬";
+    String name = "19";
+    static int count = 0;
+
+Student {
+    count++;
+}
+
+    public static void main(String[] args) {
+        Student s1 = new Student();
+        Student s2 = new Student();
+        System.out.println(s1.count); // 공유되는 값이므로 count는 2이다.
+    }
+}
+```          
 </details>
