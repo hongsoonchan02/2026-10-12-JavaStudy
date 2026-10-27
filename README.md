@@ -552,7 +552,7 @@ int result = Calculator.mutiply(10, 20);
 <details>
 <summary><h2>Chapter06 - 객체지향프로그램</h2></summary>
 
-##클래스
+## 클래스
 
 1. 클래스란?
 - 클래스는 객체를 만들기 위한 설계도이다.
