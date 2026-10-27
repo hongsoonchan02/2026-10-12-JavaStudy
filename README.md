@@ -1,5 +1,5 @@
 <details> 
-<summary><h2>Chapter01 -Java 기초</h2></summary>
+<summary><h2>Chapter01 - Java 기초</h2></summary>
 
 ## 자바의 특징
 - 이식성이 좋다 (모든 운영체제에서 실행이 가능(.class) 바이트 코드) 단, JVM 자체는 OS 종속적이다.
