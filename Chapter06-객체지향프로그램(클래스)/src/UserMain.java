@@ -18,7 +18,7 @@ public class UserMain {
 		b.type = "♠";
 		b.width = 250;
 		b.height = 350;
-		Card c = new Card();
+		Card c = new Card();  
 		c.no = 4;
 		c.type = "◆";
 		c.width = 500;
