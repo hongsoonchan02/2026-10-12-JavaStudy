@@ -498,6 +498,7 @@ public class Main {
 <details>
 <summary><h2>Chapter05 - 메소드</h2></summary>
 
+## 메소드
 
 - 특정 기능을 수행하는 코드의 묶음으로, 필요할 때마다 호출하여 사용할 수 있는 재사용 가능한 코드 블록이다.
 - 입력(매개변수)를 입력하면, 메소드 내부에서 로직을 수행하여 리턴값이 반환된다. 단, 매개변수와 리턴값은 없어도 된다.
@@ -582,6 +583,21 @@ public class Student {
     }
 }
 ```
+3. 클래스 객체 생성 방법
+
+```java
+class Student() {
+    String name = "홍순찬";
+}
+public class school() {
+
+    public static void main(String[] args) {
+
+        Student std = new Student(); // Student 타입의 std 객체 생성
+        System.out.println(std.name); // 사용한 객체의 변수 호출 가능 : 홍순찬
+    }
+}
+```
 
 3. 정적 멤버(static)
 - 객체가 아닌 클래스 자체에 소속되며, 객체 없이 사용 가능하다.
@@ -603,5 +619,61 @@ Student {
         System.out.println(s1.count); // 공유되는 값이므로 count는 2이다.
     }
 }
-```          
+```
+
+ 4. 지역 변수(Local Variable)
+- 메소드, 생성자, 제어문 등의 블록 내부에 선언
+- 사용 범위 : 선언된 블록 내부
+- 선언된 블록 안에서만 사용 가능
+- 다른 메소드에서 직접 사용 불가
+- 사용전 반드시 초기화 필요
+- 메소드 실행이 끝나면 소멸
+```java
+Class Calculator {
+    void calculate() {
+        int a = 10; // 지역 변수
+        int b = 20; // 지역 변수
+        int result = a + b;
+        System.out.println(result);
+    }
+}
+```
+
+5. 인스턴스 변수(Instance Variable)
+- 클래스 내부(메소드 밖)에 선언
+- 상용 범위 : 해당 객체의 데이터
+- 객체를 생성할 때마다 별도 공간에 생성
+- 초기화하지 않으면 기본값이 성정됨
+- 객체별로 서로 다른 데이터 저장
+```java
+class Student {
+    String name; // 인스턴스 변수
+    int age;     // 인스턴스 변수
+}
+````
+
+6. 정적 변수(Static Variable)
+- static 키워드로 선언
+- 사용 범위 : 같은 클래스의 객체들이 공유
+- 클래스당 하나의 변수만 존재
+- 모든 객체가 같은 값을 공유
+- 클래스 이름으로 접근(Student.school)
+```java
+Class Student {
+    String name;          // 인스턴스 변수
+    static String school; // 정적(static) 변수
+}
+
+7. 인스턴스 변수와 정적 변수의 차이점
+
+| 비교 항목 | 인스턴스 변수 | 정적 변수 |
+|---|---|---|
+| 선언 방법 | int age; | static int count; |
+| 소속 | 객체 | 클래스 |
+| 저장 방식 | 객체마다 별도 값 | 클래스에서 공유 |
+| 객체 생성 | 객체마다 변수 생성 | 객체와 무관하게 클래스에 소속 |
+| 접근 방법 | s1.age | Student.count |
+| 주요 용도 | 이름, 나이, 점수 등 | 공통 설정, 객체 수, 공통 상수 등 |
+
+
 </details>
