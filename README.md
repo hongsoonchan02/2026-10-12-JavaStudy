@@ -620,8 +620,9 @@ Student {
     }
 }
 ```
+## 변수
 
- 4. 지역 변수(Local Variable)
+ 1. 지역 변수(Local Variable)
 - 메소드, 생성자, 제어문 등의 블록 내부에 선언
 - 사용 범위 : 선언된 블록 내부
 - 선언된 블록 안에서만 사용 가능
@@ -639,7 +640,7 @@ Class Calculator {
 }
 ```
 
-5. 인스턴스 변수(Instance Variable)
+2. 인스턴스 변수(Instance Variable)
 - 클래스 내부(메소드 밖)에 선언
 - 상용 범위 : 해당 객체의 데이터
 - 객체를 생성할 때마다 별도 공간에 생성
@@ -650,9 +651,9 @@ class Student {
     String name; // 인스턴스 변수
     int age;     // 인스턴스 변수
 }
-````
+```
 
-6. 정적 변수(Static Variable)
+3. 정적 변수(Static Variable)
 - static 키워드로 선언
 - 사용 범위 : 같은 클래스의 객체들이 공유
 - 클래스당 하나의 변수만 존재
@@ -663,8 +664,9 @@ Class Student {
     String name;          // 인스턴스 변수
     static String school; // 정적(static) 변수
 }
+```
 
-7. 인스턴스 변수와 정적 변수의 차이점
+4. 인스턴스 변수와 정적 변수의 차이점
 
 | 비교 항목 | 인스턴스 변수 | 정적 변수 |
 |---|---|---|
@@ -674,6 +676,31 @@ Class Student {
 | 객체 생성 | 객체마다 변수 생성 | 객체와 무관하게 클래스에 소속 |
 | 접근 방법 | s1.age | Student.count |
 | 주요 용도 | 이름, 나이, 점수 등 | 공통 설정, 객체 수, 공통 상수 등 |
+
+## 생성자
+- 객체가 생성될 때 초기 한번 호출되어 초기 상태를 설정하는 메소드이다.
+- 클래스 이름과 동일하다 (대소문자 구분)
+- 반환형을 작성하지 않는다 (void 불가)
+- 매개변수를 통해 초기화가 가능하다.
+- 생성자 오버로딩이 가능하다.
+```java
+Student(String name, int age) {
+    this.name = name;
+    this.age = age;
+    count++:
+}
+```
+
+1. this
+- 생성자 자기 자신을 가르킨다.
+```java
+Student(String name, int age) {
+    this.name = name; // this.name : 현재 객체의 name 필드, name : 생성자로 전달될 매개변수
+    this.age = age;
+    count++:
+}
+```
+
 
 
 </details>
