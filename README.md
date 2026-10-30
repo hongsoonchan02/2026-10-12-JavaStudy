@@ -759,4 +759,112 @@ print(int a, String b) / print(String a, int b)
 | protected | O | O | O | X |
 | public | O | O | O | O |
 
+## 상속
+- 한 클래스가 다른 클래스의 필드와 메소드를 물려받는 기능이다.
+- 상속을 통해 기존 코드를 재사용하고, 새로운 기능을 추가할 수 있습니다.
+
+### 상속하는 이유
+- 코드 재사용으로 중복을 줄일 수 있다.
+- 유지보수성이 향상된다.
+- 공통 기능을 부모 클래스에 모아 관리할 수 있다.
+- 확장성과 유연성이 높아진다.
+```java
+class Animal {
+	
+	int age = 10;
+	public void eat() {
+		System.out.println("먹는다");
+	}
+	public void run() {
+		System.out.println("걷는다");
+	}
+}
+
+class Pig extends Animal {
+
+	public Pig() {
+		age = 5;
+	}
+	  
+	public void eat() {
+		System.out.println("돼지처럼 먹는다");
+	}
+	public void run() {
+		System.out.println("돼지처럼 걷는다");
+	}
+	
+}
+
+class Dog extends Animal {
+	
+	public Dog() {
+		age = 3;
+	}
+	
+	public void eat() {
+		System.out.println("개처럼 먹는다");
+	}
+	public void run() {
+		System.out.println("개럼 걷는다");
+	}
+}
+
+class Horse extends Animal {
+	
+	public Horse() {
+		age = 7;
+	}
+	
+	public void eat() {
+		System.out.println("말처럼 먹는다");
+	}
+	public void run() {
+		System.out.println("말처럼 걷는다");
+	}
+}
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Animal pig = new Pig();
+		System.out.println("나이 : " + pig.age);
+		pig.eat();
+		pig.run();
+		
+		Animal dog = new Dog();
+		System.out.println("나이 : " + dog.age);
+		dog.eat();
+		dog.run();
+		
+		Animal horse = new Horse();
+		System.out.println("나이 : " + horse.age);
+		horse.eat();
+		horse.run();
+	}
+
+	
+}
+```
+
+### 오버로딩
+- 상속된 상태에서 사용할 수 있다.
+- 부모의 메소드를 자식이 재정의한다.
+- 실제 객체 타입에 따라 실행된다.
+- 메소드 시그니처(이름, 매개변수, 반환타입)가 동일해야한다.
+```java
+@Override
+void Sound() {
+    System.out.println("멍멍");
+}
+```
+
+### 생성자 실행 순서
+1. 객체 메모리 할당 및 기본값 초기화
+2. 부모 클래스의 필드 초기화식, 초기화 블록 실행
+3. 부모 클래스 생성자 실행
+4. 자식 클래스의 필드 초기화식, 초기화 블록 실행
+5. 자식 클래스 생성자 실행
+// 부모 생성자가 먼저 실행되는 이유는 자식 객체가 정상적으로 생성되려면 부모의 부분이 먼저 초기화되어야 하기 때문이다.
+
 </details>
