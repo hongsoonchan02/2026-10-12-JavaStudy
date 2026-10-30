@@ -6,7 +6,7 @@ public class UserMain {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Music music = new GenieMusic();
+		Music music = new MelonMusic();
 		// 목록 출력
 		MusicVO[] list = music.musicListData();
 		for(MusicVO vo : list) {
