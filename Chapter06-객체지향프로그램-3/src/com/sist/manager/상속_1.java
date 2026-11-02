@@ -66,7 +66,7 @@ class Animal {
 }
 // age, eat(), run()
 class Pig extends Animal {
-	// 재정의 => 오버라이딩
+	// 재정의 => 오버라이딩	
 	/*
 	 * 	조건
 	 * 	 1. 상속을 받은 클래스
