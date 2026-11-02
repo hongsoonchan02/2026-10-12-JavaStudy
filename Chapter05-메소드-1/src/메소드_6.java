@@ -13,7 +13,7 @@
  * 		====> 기본 역할 : 클래스와 클래스를 연결하는 역할
  * 						=> 동작 / 행위
  */
-public class 메소드_6 {
+public class 메소드_6 {  
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

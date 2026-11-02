@@ -13,7 +13,7 @@ package com.sist.constructor;
  * 											   getter / setter  
  * 	6. 제어어 ====> static / abstract / final
  * 					| 공유하는
- * 							  | 공통적인
+ * 							  | 공통적인  
  * 										| 마지막인
  * 	7. 메소드, 변수 종류 (static, instance)
  * 						| 공통   | 객체마다 따로 가지고 있는 변수
