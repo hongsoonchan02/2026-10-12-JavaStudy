@@ -601,7 +601,7 @@ public class school() {
 
 3. 정적 멤버(static)
 - 객체가 아닌 클래스 자체에 소속되며, 객체 없이 사용 가능하다.
-- 객체.과 클래스. 둘 다 사용 가능하다.
+- 객체와 클래스 둘 다 사용 가능하다.
 - 정적 변수 정적 메소드가 있고 여러 객체를 생성하더라도 하나의 값을 공유한다.
 ```java
 class Student {
@@ -759,6 +759,24 @@ print(int a, String b) / print(String a, int b)
 | protected | O | O | O | X |
 | public | O | O | O | O |
 
+```java
+private 접근 제어자를 사용할 때 다른 클래스에서 접근하려면 Getter / Setter를 사용해야한다.
+
+class Student {
+    private int num;
+	private String name;
+	private String subject;
+}
+
+public void setName(String name) { // 주입 메소드
+    this.name = name;
+}
+
+public String getName(String name) { // 반환 메소드
+	return name;
+}
+```
+
 ## 상속
 - 한 클래스가 다른 클래스의 필드와 메소드를 물려받는 기능이다.
 - 상속을 통해 기존 코드를 재사용하고, 새로운 기능을 추가할 수 있습니다.
@@ -866,5 +884,54 @@ void Sound() {
 4. 자식 클래스의 필드 초기화식, 초기화 블록 실행
 5. 자식 클래스 생성자 실행
 // 부모 생성자가 먼저 실행되는 이유는 자식 객체가 정상적으로 생성되려면 부모의 부분이 먼저 초기화되어야 하기 때문이다.
+
+### 추상 클래스 (Abstract Class)
+- 실체 클래스들의 공통적인 필드나 메소드를 추출해서 선언한 클래스를 추상 클래스라고 한다.
+- 추상 클래스는 실체 클래스의 부모 역할을 하고, 실체 클레스는 추상 클래스를 상속해서 공통적인 필드나 메소드를 물려받을 수 있다.
+- 클래스와 메소드 선언에 abstract 키워드를 붙이면 추상 클래스, 메소드가 된다.
+- 추상 메소드도 상속받은 후 오버라이딩이 가능하다.
+```java
+public abstract class Phone {
+
+    String owner;
+
+	Phone(String owner) {
+	    this.owner = owner;
+	}
+
+	void turnOn() {
+		System.out.println("폰 전원을 켭니다.");
+	}
+
+	void turnOff() {
+		System.out.println("폰 전원을 끕니다.");
+	}
+}
+```
+```java
+public class SmartPhone extends Phone {
+
+	SmartPhone(String owner) {
+		super(owner);
+	}
+
+	void internetSearch() {
+		System.out.println("인터넷 검색을 합니다.");
+	}
+}
+```
+```java
+public class PhoneExample {
+	public static void main(String[] args) {
+
+	SmartPhone smartPhone = new SmaetPhone("홍길동");
+
+	smartPhone.turnOn(); // Phone의 메소드
+	smartPhone.internetSearch();
+	smartPhone.turnOff(); // Phone의 메소드
+	}
+}
+```
+
 
 </details>
