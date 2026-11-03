@@ -936,6 +936,117 @@ public class PhoneExample {
 </details>
 
 <details>
-	<summary>Chapter08-인터페이스</summary>
+	<summary><h2>Chapter08-인터페이스</h2></summary>
+
+## 인터페이스(interface)
+
+- 클래스가 구현해야하는 기능의 규격(설계도)
+- 두 장치를 연결하는 접속기 (서로 다른 객체를 연결하는 역할)
+- 서로 다른 객체를 연결하고 전달해주는 역할을 하므로써 결속성을 낮춘다.
+- 객체 생성이 불가하고 생성자가 없다.
+- 필드엔 상수만 선언 가능하다.
+- 다중 상속이 가능하다
+- 추상 메서드를 필수적으로 구현해야한다.
+
+### 인터페이스 선언
+- 인터페이스는 class 키워드 대신 interface 키워드를 사용하여 선언한다.
+- 
+```java
+interface 인터페이스명 {...} // default
+public interface 인터페이스명 {...} //public
+
+- 인터페이스가 선언 할 수 있는 멤버들
+public interface 인터페이스명 {
+	// public 상수 필드
+	// public 추상 메소드
+	// public 디폴트 메소드
+	// public 정석 메소드
+	// private 메소드
+	// private 정적 메소드
+}
+```
+
+### 구현 클래스 선언
+- 클래스 뒤에 implements 키워드를 선언부에 명시해야한다.
+
+```java
+public class B implements 인터페이스명 {...}
+
+- 인터페이스 추상 메소드 재정의.
+- RemoteControl인터페이스의 turnOn() 추상 메소드가 있다면
+
+public class Television implements RemoteControl {
+	@Override
+	public void turnOn() {
+		System.out.println("TV를 켭니다.");
+	}
+}
+```
+
+### 변수 선언과 구현 객체 대입
+- 인터페이스도 하나의 타입이므로 변수의 타입으로 사용할 수 있다.
+- 인터페이스는 참조 타입에 속하므로 변수에는 객체를 참조하고 있지 않다는 뜻으로 null 대입 가능.
+  
+```java
+RemoteControl rc;
+RemoteControl rc = null;
+
+- 인터페이스를 통해 구현 객체를 사용하려면, 인터페이스 변수에 구현 객체를 대입해야 한다.
+- 실제 실행되는 메소드는 구현 객체에서 재정의된 메소드이다.
+
+Remotecontrol rc = new Television();
+rc.turnOn(); // TV를 켭니다.
+```
+
+### 상수 필드
+- 인터페이스는 public static final 특성을 갖는 불변의 상수 필드를 멤버로 가질 수 있다.
+- 상수명은 기본으로 대문자로 작성하되 서로 다른 단어로 구성되어 있을 경우에는 언더바(_)로 연결하는 것이 관례이다.
+- 상수는 인터페이스명.으로 바로 접근가능하다.
+  
+```java
+[public static final] 타입 상수명 = 값;
+		|
+ 	생략 가능 
+```
+
+### 추상 메소드
+
+- 인터페이스는 구현 클래스가 재정의해야하는 public 추상 메소드를 멤버로 가질 수 있다.
+
+```java
+[public abstract] 리턴타입 메소드명(매개변수, ...);
+		|
+	생략 가능
+```
+
+### 디폴트 메소드
+
+- 인터페이스에는 완전한 실행 코드를 가진 디폴트 메소드를 선언할 수 있다.
+- 추상 메소드는 중괄호가 없지만, 디폴트 메소드는 실행부가 있다.
+- 디폴트 메소드는 구현 객체를 인터페이스 변수를 대입하고 나서 호출해야 한다.
+
+```java
+[public] default 리턴타입 메소드명(매개변수, ...) {...}
+	|
+ 생략 가능
+```
+
+### 정적 메소드
+
+- 추상 메소드와 디폴트 메소드는 구현 객체가 필요하지만, 정적 메소드는 구현 객체가 없어도 인터페이스만으로 호출 가능하다.
+
+```java
+[public / private] static 리턴타입 메소드명(매개변수, ...) {...}
+```
+
+### private 메소드
+
+- 외부에서 접근할 수 없는 private 메소드 선언이 가능하다.
+- 디플트와 정적 메소드들의 중복 코드를 줄이기 위해 사용한다.
+
+```java
+private 반환형 메소드명(매개변수, ...) {...}
+```
+	
 	
 </details>
