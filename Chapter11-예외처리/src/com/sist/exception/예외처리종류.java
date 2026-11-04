@@ -69,7 +69,7 @@ public class 예외처리종류 {
 			
 //			System.out.println(ex.getMessage());
 			ex.printStackTrace();
-		}
+		}   
 	}
 	
 	public static void ddd() {
