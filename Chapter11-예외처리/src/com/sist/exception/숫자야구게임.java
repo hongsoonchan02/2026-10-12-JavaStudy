@@ -163,7 +163,7 @@ public class 숫자야구게임 extends JFrame implements ActionListener{
 			s=0;
 			b=0;
 			
-			for(int i=0;i<3;i++) // com
+			for(int i = 0; i < 3; i++) // com
 			{
 				for(int j=0;j<3;j++) // user
 				{
@@ -282,4 +282,4 @@ public class 숫자야구게임 extends JFrame implements ActionListener{
 		}
 	}
 
-}s
+}

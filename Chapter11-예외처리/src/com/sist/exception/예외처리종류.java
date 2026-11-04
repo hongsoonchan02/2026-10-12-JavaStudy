@@ -100,7 +100,7 @@ public class 예외처리종류 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		aaa(10,0);
+		aaa(10, 0);
 		bbb(null);
 		ccc(" 20");
 		ddd();
