@@ -1047,6 +1047,99 @@ rc.turnOn(); // TV를 켭니다.
 ```java
 private 반환형 메소드명(매개변수, ...) {...}
 ```
-	
-	
+</details>
+
+<details>
+	<summary><h2>Chapter11-예외처리</h2></summary>
+
+- 예외가 발생했을 때 프로그램의 갑작스러운 종료를 막고 정상 실행을 유지할 수 있도록 처리하는 코드를 예외 처리 코드라고 한다.
+
+### try-catch-finally
+- try-catch-finally 블록은 생성자 내부와 메소드 내부에서 작성된다.
+
+```java
+try {   
+// 예외 발생 가능 코드
+} catch(예외클래스 e) {
+	예외 처리
+} finally {
+	항상 실행;
+}
+```
+- try 블록에서 작성한 코드가 예외 없이 정상 실행되면 catch 블록은 실행되지 않고 finally 블록이 실행된다.
+- try 블록에서 예외가 발생하면 catch 블록이 실행되고 이어서 finally 블록도 실행된다
+- finally 블록은 try 블록과 catch 블록에서 return으로 끝내든 예외가 발생하든 무조건 실행된다.
+- finally 블록은 생략 가능하다.
+
+### 예외 정보 출력
+```java
+public static void printlength(String data) {
+		
+		try {
+			int result = data.length();
+			System.out.println("문자 수 : " + result);
+		} catch (NullPointerException e) {
+			System.out.println(e.getMessage()); - 1
+			System.out.println(e.toString()); - 2
+			e.printStackTrace(); - 3
+		} finally {
+			System.out.println("실행");
+		}
+	}
+```
+
+- e.getMessage()
+- 예외가 발생한 이유만 리턴
+```java
+Cannot invoke "String.length()" because "data" is null
+```
+
+- e.String()
+- 예외의 종류와 발생한 이유 리턴
+```java
+java.lang.NullPointerException: Cannot invoke "String.length()" because "data" is null
+```
+
+- e.printStackTrace()
+- 예외가 어디서 발생했는지 추적한 내용도 함께 출력
+```java
+java.lang.NullPointerException: Cannot invoke "String.length()" because "data" is null
+	at com.sist.exception.ExEcp.printLength(ExEcp.java:8)
+	at com.sist.exception.ExEcp.main(ExEcp.java:22)
+```
+
+### 예외 종류에 따른 처리
+- try 블록에는 다양한 종류의 예외가 발생할 수 있다.
+- 이 경우 다중 catch를 사용하면 발생하는 예외에 따라 예외 처리 코드를 다르게 작성할 수 있다.
+- catch 블록이 여러개여도 단 하나만 실행된다 이유는 예외가 하나만 발생하도 바로 멈추고 catch 블록으로 이동하기 때문이다.
+- 처리해야할 예외 클래스들이 상속 관계에 있을 경우는 하위 클래스 catch 블록을 먼저 작성하고 상위 클래스 catch 블록을 나중에 작성한다.
+```java
+try {
+
+	ArrayIndexOutOfBoundsException
+
+	NumberFormatException
+
+} catch(ArrayIndexOutOfBoundsException e) {
+	예외 처리 1
+} catch(NumberFormatException e) {
+	예외 처리 2
+}
+```
+
+### 리소스 자동 닫기
+- 리소스(resource)란 데이터를 제공하는 객체를 말한다.
+- 리소스는 사용하기 위해 열어야하며 사용이 끝난 후에는 닫아야 한다.
+- 닫지 않으면 불안정한 상태로 남아있게 된다.
+```java
+FileInputStream fis = null;
+try {
+	fis = new FileInputStream("file.txt");
+	...
+} catch (IOException e) {
+	...
+} finally {
+	fit.close();
+}
+``` 
 </details>
