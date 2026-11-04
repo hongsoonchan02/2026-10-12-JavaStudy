@@ -1107,4 +1107,39 @@ java.lang.NullPointerException: Cannot invoke "String.length()" because "data" i
 	at com.sist.exception.ExEcp.printLength(ExEcp.java:8)
 	at com.sist.exception.ExEcp.main(ExEcp.java:22)
 ```
+
+### 예외 종류에 따른 처리
+- try 블록에는 다양한 종류의 예외가 발생할 수 있다.
+- 이 경우 다중 catch를 사용하면 발생하는 예외에 따라 예외 처리 코드를 다르게 작성할 수 있다.
+- catch 블록이 여러개여도 단 하나만 실행된다 이유는 예외가 하나만 발생하도 바로 멈추고 catch 블록으로 이동하기 때문이다.
+- 처리해야할 예외 클래스들이 상속 관계에 있을 경우는 하위 클래스 catch 블록을 먼저 작성하고 상위 클래스 catch 블록을 나중에 작성한다.
+```java
+try {
+
+	ArrayIndexOutOfBoundsException
+
+	NumberFormatException
+
+} catch(ArrayIndexOutOfBoundsException e) {
+	예외 처리 1
+} catch(NumberFormatException e) {
+	예외 처리 2
+}
+```
+
+### 리소스 자동 닫기
+- 리소스(resource)란 데이터를 제공하는 객체를 말한다.
+- 리소스는 사용하기 위해 열어야하며 사용이 끝난 후에는 닫아야 한다.
+- 닫지 않으면 불안정한 상태로 남아있게 된다.
+```java
+FileInputStream fis = null;
+try {
+	fis = new FileInputStream("file.txt");
+	...
+} catch (IOException e) {
+	...
+} finally {
+	fit.close();
+}
+``` 
 </details>
