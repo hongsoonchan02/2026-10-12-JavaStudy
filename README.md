@@ -1050,7 +1050,7 @@ private 반환형 메소드명(매개변수, ...) {...}
 </details>
 
 <details>
-	<summary><h2>Chapter09-중첩 클래스</h2></summary>
+	<summary><h2>Chapter09 - 중첩 클래스</h2></summary>
 
 ### 중첩 클래스
 - 중첩 클래스(Nested Class)란 클래스 내부에 선언한 클래스를 말한다.
