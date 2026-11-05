@@ -936,7 +936,7 @@ public class PhoneExample {
 </details>
 
 <details>
-	<summary><h2>Chapter08-인터페이스</h2></summary>
+	<summary><h2>Chapter08 - 인터페이스</h2></summary>
 
 ## 인터페이스(interface)
 
@@ -1050,7 +1050,7 @@ private 반환형 메소드명(매개변수, ...) {...}
 </details>
 
 <details>
-	<summary><h2>Chapter11-예외처리</h2></summary>
+	<summary><h2>Chapter11 - 예외처리</h2></summary>
 
 - 예외가 발생했을 때 프로그램의 갑작스러운 종료를 막고 정상 실행을 유지할 수 있도록 처리하는 코드를 예외 처리 코드라고 한다.
 
