@@ -1262,3 +1262,16 @@ try {
 }
 ```
 </details>
+
+<details>
+	<summary><h2>Chapter12-라이브러리</h2></summary>
+
+## Java.lang
+- 자바 언어의 기본적인 클래스를 담고 있는 패키지로, 이 패키지에 있는 클래스와 인터페이스는 import 없이 사용할 수 있다.
+
+### Object
+- 클래스를 선언할 때 extends 키워드로 다른 클래스를 상속하지 않으면 암시적으로 java.lang.Object 클래스를 상속하게 된다.
+- 그렇기 때문에 Object가 가진 메소드는 모든 객체에서 사용할 수 있다.
+
+#### 주요 메서드
+</details>
