@@ -62,7 +62,7 @@ public class 문자열_5 {
 		// trim() => 검색어, 사용자 입력 (ID, PWD)
 		// 공백 => space 문자
 		int a = 100;
-		int b = 200;
+		int b = 200;   
 		System.out.println(a + b);
 		// 공유 메소드 => static
 		System.out.println(String.valueOf(a) + b);  
