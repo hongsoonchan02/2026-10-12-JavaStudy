@@ -1264,14 +1264,30 @@ try {
 </details>
 
 <details>
-	<summary><h2>Chapter12-라이브러리</h2></summary>
+	<summary><h2>Chapter12 - 라이브러리</h2></summary>
 
 ## Java.lang
 - 자바 언어의 기본적인 클래스를 담고 있는 패키지로, 이 패키지에 있는 클래스와 인터페이스는 import 없이 사용할 수 있다.
 
-### Object
+### Object 클래스
 - 클래스를 선언할 때 extends 키워드로 다른 클래스를 상속하지 않으면 암시적으로 java.lang.Object 클래스를 상속하게 된다.
 - 그렇기 때문에 Object가 가진 메소드는 모든 객체에서 사용할 수 있다.
 
-#### 주요 메서드
+#### 주요 메소드
+| 메소드 | 반환타입 | 용도 |
+|---|---|---|
+| boolean equals(Object obj) | boolean | 객체의 번지를 비교하고 결과를 리턴 |
+| int hashCode() | int | 객체의 해시코드를 리턴 |
+| String toString() | String | 객체 문자 정보를 리턴 |
+
+### System 클래스
+- 운영체제의 일부 기능을 이용할 수 있게 해주는 클래스
+
+#### 주요 메소드
+| 메소드 | 반환타입 | 용도 |
+|---|---|---|
+|  | boolean | 객체의 번지를 비교하고 결과를 리턴 |
+| int hashCode() | int | 객체의 해시코드를 리턴 |
+|  | String | 객체 문자 정보를 리턴 |
+
 </details>
