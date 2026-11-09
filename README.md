@@ -1286,13 +1286,54 @@ try {
 #### 주요 메소드
 |  | 메소드 |  반환타입 | 용도 |
 |---|---|---|---|
-| | out | 콘솔(모니터)에 문자 출력 |
-| 필드 | err | 콘솔(모니터)에 에러 내용 출력 |
-| | in | 키보드 입력 |
-| | exit(int status) | 프로세스 종료 |
-| | currentTimeMillis() | 현재 시간을 밀리초 단위의 long 값으로 리턴 |
-| 메소드| nanoTime() | 현재 시간을 나노초 단위의 long 값으로 리턴 |
-| | getProperty() | 운영체제와 사용자 정보 제공 |
-| | getenv() | 운영체제의 환경 변수 정보 제공 |
+| | out | |  콘솔(모니터)에 문자 출력 |
+| 필드 | err | | 콘솔(모니터)에 에러 내용 출력 |
+| | in | | 키보드 입력 |
+| | exit(int status) | void | 프로세스 종료 |
+| | currentTimeMillis() | long | 현재 시간을 밀리초 단위의 long 값으로 리턴 |
+| 메소드| nanoTime() | long | 현재 시간을 나노초 단위의 long 값으로 리턴 |
+| | getProperty() | String | 운영체제와 사용자 정보 제공 |
+| | getenv() | Map<String, String> | 운영체제의 환경 변수 정보 제공 |
+
+### 문자열 클래스
+
+#### String 클래스
+- 문자열을 저장하고 조작할 때 사용한다.
+- 문자열 리터럴은 자동으로 String 객체로 생성되지만, String 클래스의 다양한 생성자를 이용해서 직접 생성 가능
+- Chapter02의 문자열 제어 메소드 참조
+
+#### StringBuilder 클래스
+- 내부 버퍼(데이터를 저장하는 메모리)에 문자열을 저장해두고 그 안에서 추가, 수정, 삭제 작업을 하도록 설계됨.
+- 따라서 String처럼 새로운 객체를 만들지 않고 문자열 조작가능
+| 메소드 | 반환타입 | 용도 |
+|---|---|---|
+| append(기본값 | 문자열) | StringBuilder| 문자열의 끝에 추가 |
+| insert(위치, 기본값 | 문자열) | StringBuilder | 문자열을 지정 위치에 추가 |
+| delete(시작 위치, 끝 위치) | StringBuilder | 문자열 일부를 삭제 |
+| replace(시작 위치, 끝 위치, 문자열) | StringBuilder | 문자열 일부를 대체 |
+| toString() | String | 완성된 문자열을 리턴 |
+
+#### StringTokenizer 클래스
+- 문자열이 구분자로 연결되어 있을 경우, 구분자를 기준으로 문자열을 분리할 수 있다.
+- 문자로 구분한다.
+| 메소드 | 반환타입 | 용도 |
+|---|---|---|
+| countTokens() | int | 분리할 수 있는 문자열의 총 수 |
+| hasMoreTokens() | boolean | 남아 있는 문자열이 있는지 여부 |
+| nextToken() | String | 문자열을 하나씩 가져옴 |
+
+#### 포장 클래스
+- 자바는 기본 타입의 값을 갖는 객체를 생성할 수 있다. 이러한 객체를 포장 객체라고 한다.
+| 기본 타입 | 포장 클래스 |
+|---|---|
+| `byte` | `Byte` |
+| `short` | `Short` |
+| `int` | `Integer` |
+| `long` | `Long` |
+| `float` | `Float` |
+| `double` | `Double` |
+| `char` | `Character` |
+| `boolean` | `Boolean` |
+  
 
 </details>
