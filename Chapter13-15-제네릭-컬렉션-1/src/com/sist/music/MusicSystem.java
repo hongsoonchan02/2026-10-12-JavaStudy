@@ -130,8 +130,8 @@ public abstract class MusicSystem {
 				key = s.substring(s.indexOf("=") + 1,
 						s.indexOf("\""));
 				key = key.substring(0, key.indexOf("\\"));
-				System.out.println(key);
-				break;
+				System.out.println(key);  
+				break; 
 			}
 			
 		} catch(Exception e) {
