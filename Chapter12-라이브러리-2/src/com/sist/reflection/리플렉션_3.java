@@ -19,7 +19,7 @@ import com.sist.annotation.RequestMapping;
  *                  정보를 얻어서 직접 조작하는 기술 
  *       = 어노테이션 : 클래스, 변수, 메소드에 표시를 해서 
  *                    바로 찾을 수 있게 만드는 기술 
- *                    => 인덱스 , if문이 추가 
+ *                    => 인덱스 , if문이 추가    
  *                              ---------- 기능은 없다 (찾기)
  *          Spring : @Controller / @Service 
  *                   @Autowired / @GetMapping / @RequestMapping
