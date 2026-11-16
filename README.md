@@ -1509,6 +1509,7 @@ String s = list.get(0);              // 캐스팅 불필요
 
 <details>
 	<summary><h2>Chapter15 - 컬렉션</h2></summary>
+
 ### 웹 개발 핵심 컬렉션
 	
 | 컬렉션 | 특징 |
