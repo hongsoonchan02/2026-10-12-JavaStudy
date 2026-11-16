@@ -1501,6 +1501,69 @@ String s = list.get(0);              // 캐스팅 불필요
 | `<? extends T>` | T 또는 하위 타입 | 읽기 (Producer) |
 | `<? super T>` | T 또는 상위 타입 | 쓰기 (Consumer) |
 
+</details>
+
+<details>
+	<summary><h2>Chapter14 - 스레드</h2></summary>
+</details>
+
+<details>
+	<summary><h2>Chapter15 - 컬렉션</h2></summary>
+### 웹 개발 핵심 컬렉션
+	
+| 컬렉션 | 특징 |
+|---|---|
+| `ArrayList` | 순서 O, 중복 O |
+| `HashMap` | 키-값으로 구성 순서 보장 X |
+| `HashSet` | 중복이 없고 순서 보장 X |
+
+#### ArrayList
+
+- 동적 배열이므로 크기가 자동으로 늘어나며, 인덱스로 빠르게 접근한다. 배열 대신 주로 사용한다.
+
+| 메서드 | 설명 |
+|---|---|
+| `add(e)` / `add(i, e)` | 끝에 추가 / 특정 위치에 삽입 |
+| `get(i)` | 인덱스로 조회 |
+| `set(i, e)` | 값 수정 |
+| `remove(i)` / `remove(obj)` | 인덱스 / 객체로 삭제 |
+| `size()` | 요소 개수 |
+| `isEmpty()` | 비어 있는지 확인 |
+| `contains(obj)` | 포함 여부 |
+| `indexOf(obj)` | 위치 검색 (없으면 -1) |
+| `clear()` | 전체 삭제 |
+
+#### HashMap
+
+- 키(Key) - 값(Value) 쌍으로 저장되고, 키는 중복 불가능. 값은 중복 가능하다.
+- 조회 속도가 매우 빠르다.
+
+| 메서드 | 설명 |
+|---|---|
+| `put(k, v)` | 추가 / 같은 키면 값 덮어쓰기 |
+| `get(k)` | 키로 값 조회 (없으면 `null`) |
+| `getOrDefault(k, def)` | 없으면 기본값 반환 |
+| `containsKey(k)` | 키 존재 여부 |
+| `containsValue(v)` | 값 존재 여부 |
+| `remove(k)` | 삭제 |
+| `putIfAbsent(k, v)` | 키가 없을 때만 추가 |
+| `keySet()` | 모든 키 |
+| `values()` | 모든 값 |
+| `entrySet()` | 모든 키-값 쌍 |
 
 
+#### HashSet
+
+- 중복이 될 수 없는 집합이다.
+- 순서가 보장되지 않는다.
+- 검색 속도가 빠르다.
+
+| 메서드 | 설명 |
+|---|---|
+| `add(e)` | 추가 (이미 있으면 `false` 반환) |
+| `remove(e)` | 삭제 |
+| `contains(e)` | 포함 여부 |
+| `size()` | 요소 개수 |
+| `isEmpty()` | 비어 있는지 확인 |
+| `clear()` | 전체 삭제 |
 </details>
