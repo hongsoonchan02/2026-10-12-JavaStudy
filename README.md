@@ -1474,6 +1474,33 @@ int ii = Integer.parseInt(i);
 
 <details>
 	<summary><h2>Chapter13 - 제네릭</h2></summary>
-
 	
+- 제네릭(Generic)이란 결정되지 않은 타입을 파라미터로 처리하고 실제 사용할 때 파라미터를 구체적인 타입으로 대체시키는 기능
+- 제네릭을 사용하면 형변환 불필요
+- 하나의 코드로 여러 타입 재사용
+```java
+// 제네릭 없이
+List list = new ArrayList();
+list.add("hello");
+Integer n = (Integer)list.get(0);   // 런타임 에러
+
+// 제네릭 사용
+List<String> list = new ArrayList<>();
+list.add("hello");
+String s = list.get(0);              // 캐스팅 불필요
+// list.add(123);                    // 컴파일 에러
+```
+
+#### 와일드카드
+
+- 알 수 없는 타입을 나타내는 와일드카드이다
+
+| 형태 | 의미 | 용도 |
+|---|---|---|
+| `<?>` | 모든 타입 | 타입 무관 |
+| `<? extends T>` | T 또는 하위 타입 | 읽기 (Producer) |
+| `<? super T>` | T 또는 상위 타입 | 쓰기 (Consumer) |
+
+
+
 </details>
