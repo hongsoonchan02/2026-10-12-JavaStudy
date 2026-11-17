@@ -1505,6 +1505,68 @@ String s = list.get(0);              // 캐스팅 불필요
 
 <details>
 	<summary><h2>Chapter14 - 스레드</h2></summary>
+
+### 스레드 (Thread)
+
+- 작업을 병렬로 처리하기 위한 실행 단위
+- 경량 프로세스, 작업의 독립적 실행
+- 동시성(Concurrency)과 병렬 처리(Parallelism) 지원
+
+#### 스레드 생성 방법
+
+1. Thread 상속
+```java
+class MyThread extends Thread {
+    public void run() {
+        // 작업
+    }
+}
+-> 오버라이딩 후 statr() 호출
+```
+2. Runnable 구현 (권장)
+```java
+class MyTask implements Runnable {
+    public void run() {
+        // 작업
+    }
+}
+new Thread(new MyTask()).start();
+```
+
+```text
+스레드의 생명주기
+NEW → RUNNABLE ⇄ (BLOCKED / WAITING / TIMED_WAITING) → TERMINATED
+```
+#### 주요 메소드
+
+1. start() : 대기상태 => run()을 호출하는 경우
+2. run() : 스레드 동작
+3. sleep() : 일시 정지
+4. interrupt() : 스레드 종료
+5. currentThread() : 현재 실행중인 Thread의 이름
+6. getName() / setName() : 스레드 이름 / 스레드 이름 변경
+7. getPriority / setPriority() : 우선 순위 결정
+8. wait() : 다른 스레드의 신호를 기다림
+
+### 스레드 풀 (Thread Pool)
+
+- 스레드를 미리 만들어 두고 재사용하는 방식이다.
+- 작업은 큐에 쌓이고 쉬고 있는 스레드가 꺼내서 실행한다.
+- 스레드를 만들고 없애는 비용을 줄일 수 있다.
+- 동시에 도는 스레드 수의 상한을 둬서 자원을 관리한다.
+- 작업 제출과 실행을 분리해서 관리하기 쉽다.
+
+#### 생성 방법
+
+1. newCachedThreadPool()
+2. newFixedThreadPool(int nThreads)
+
+```java
+ExecutorService pool = Executors.newFixedThreadPool(4);
+Future<Integer> f = pool.submit(() -> 42);
+System.out.println(f.get());
+pool.shutdown();
+```
 </details>
 
 <details>
