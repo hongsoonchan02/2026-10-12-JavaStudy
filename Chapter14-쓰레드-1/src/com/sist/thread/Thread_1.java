@@ -1,4 +1,4 @@
-package com.sist.thread;
+ package com.sist.thread;
 /*
  *   Thread => 한개의 프로그램안에 여러개의 기능이 동시에 수행
  *                           -------------------
@@ -63,9 +63,59 @@ package com.sist.thread;
  *                | 모든 쓰레드 종료 => 게임 종료 
  *       | 대기상태
  */
+ // 한가지만 수행
+ // 예) 비행기 => 날라간다 / 총알 => 날라간다
+ class MyThread extends Thread {
+	 
+	 // 동작
+	 public void run() {
+		 
+		 for(int i = 1; i < 10; i++) {
+			 System.out.println(getName() + ":" + i);
+			 try {
+				 Thread.sleep(100); // MS 1/1000 => 동작을 멈추다
+			 } catch(Exception e) {
+				 
+			 }
+		 }
+	 }
+ }
+ /*
+  *   쓰레드 생성
+  *   MyThread m1 = new MyThread();
+  *           ---- JVM
+  *           1) 이름 부여
+  *              Thread-0 Thread-1 .....  이름 변경 : serName();
+  *                                       이름 조회 : getName();
+  *           2) 우선 순위 배정
+  *              사용자 정의 => NORM_PRIORITY => 5
+  *              1 ~ 10 => 변경 => setPriority(1 ~ 10)
+  *           
+  *   실행
+  *   m1.start() ==> run() 호출
+  */
 public class Thread_1 {
 
 	public static void main(String[] args) {
+		
+		MyThread m1 = new MyThread();
+		MyThread m2 = new MyThread();
+		MyThread m3 = new MyThread();
+		// CPU에서 시간을 분할해서 => thread가 한번씩 수행
+		System.out.println("m1 정보 : " + m1.getName() + "," + m1.getPriority());
+		System.out.println("m1 정보 : " + m2.getName() + "," + m2.getPriority());
+		System.out.println("m1 정보 : " + m3.getName() + "," + m3.getPriority());
+		// 이름 변경
+		m1.setName("홍길동");
+		m2.setName("박문수");
+		m3.setName("심청이");
+		// 우선순위 변경 ==> 거의 비슷
+		m1.setPriority(10);
+		m2.setPriority(3);
+		m3.setPriority(1);
+		m1.start(); // run() 호출
+		m2.start();
+		m3.start();
 		
 	}
 }

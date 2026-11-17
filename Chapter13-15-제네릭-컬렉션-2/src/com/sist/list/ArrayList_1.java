@@ -1,7 +1,5 @@
 package com.sist.list;
 
-import java.util.HashSet;
-
 public class ArrayList_1 {
 
 	public static void main(String[] args) {
