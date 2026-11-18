@@ -1630,3 +1630,71 @@ pool.shutdown();
 | `isEmpty()` | 비어 있는지 확인 |
 | `clear()` | 전체 삭제 |
 </details>
+
+<details>
+	<summary><h2>Chapter18 - 입출력(IO)</h2></summary>
+
+### 스트림
+
+- 데이터가 이동하는 통로이다.
+- 입력 스트림은 외부(파일, 키보드 등)에서 프로그램으로 데이터를 가져온다.
+- 출력 스트림은 프로그램에서 외부(파일, 화면 등)으로 데이트를 내보낸다.
+
+### 바이트 / 문자
+
+| 구분 | 바이트 스트림 | 문자 스트림 |
+|---|---|---|
+| 대상 | 이미지, 동영상 등 | 한글, 텍스트 |
+| 최상위 클래스 | InputStream / OutputStream | Reader / Writer |
+| 처리 단위 | 1byte | 1문자(char) 2byte |
+
+### 파일에 쓰기 / 읽기
+-----
+#### FileOutPutStream
+
+- 바이트 데이터를 파일에 저장합니다.
+- 문자열은 getBytes()로 바이트로 바꿔서 쓴다.
+```java
+FileOutputStream fos = new FileOutputStream("test.txt");
+fos.write("Hello".getBytes());
+fos.close();
+```
+- 주요 메소드 : write(), close()
+
+#### FileInputStream
+- 파일을 1byte씩 읽는다. 파일 끝에 도달하면 -1을 반환한다.
+- 1byte씩 읽기 때문에 한글은 깨진다.
+```java
+int data;
+while ((data = fis.read()) != -1) {
+    System.out.print((char) data);
+}
+```
+- 주요 메소드 : read()
+
+### 텍스트 파일 쓰기 / 읽기
+-----
+#### FilReader
+
+- 문자 단위로 처리하는 스트림이다.
+```java
+FileWriter fw = new FileWriter("memo.txt");
+fw.write("안녕하세요!\n");
+fw.close();
+```
+- 주요 메소드 : write(), read()
+
+### 한줄씩 읽기
+------
+#### BufferedReader
+
+- 버퍼를 사용해서 빠르게 읽고, readLine()으로 한줄 단위로 읽을 수 있다.
+- 파일 끝에 도달하면 -1이 아닌 null을 반환한다.
+```java
+BufferedReader br = new BufferedReader(new FileReader("memo.txt"));
+String line;
+while ((line = br.readLine()) != null) {
+    System.out.println(line);
+}
+```
+</details>
