@@ -1,4 +1,9 @@
 package com.sist.io;
+
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 // Files : java.nio
 /*
  *   파일 관리 => 파일 / 폴더를 쉽게 관리할 수 있게 만든 클래스
@@ -19,8 +24,102 @@ package com.sist.io;
  *     1) 웹 : 데이터베이스 80%
  *        => Open API => 웹에서 읽기 : 10% IO
  *        => api Key => 10%
- * 
+ *    ----------------------------------------------
+ *    
+ *    Files
+ *      1. Path : 파일 경로 지정
+ *          ||
+ *      2. Files : 파일 생성 / 읽기 / 쓰기
+ *          ||
+ *      3. 파일 시스템
+ *          실제파일 / 폴더 처리
+ *      ------------------------------
+ *      Path : 파일의 위치
+ *      Files : 파일 담당
+ *      exists() : 파일 존재 여부
+ *      createFile : 파일 생성
+ *      writeString() : 문자열 저장
+ *      readString() : 문자열 읽기
+ *      copy() : 파일 복사
+ *      move() : 이동 ==> 파일 자체 이동
+ *      delete() : 파일 삭제
+ *      deleteIfExists() : 파일이 있는 경우에만 삭제
+ *      
+ *       * Files는 모든 메소드가 static이다
  */
 public class IO_6 {
+	public static void main(String[] args) {
+		
+		// 1. 파일 생성
+		/*try {
+			Path path = Paths.get("test.txt");
+			Files.createFile(path);
+			System.out.println("파일 생성 완료!!");
+		} catch(Exception e) {
+			e.printStackTrace();
+		}*/
+		
+		// 2. 파일에 문자열 저장
+		/*try {
+			Path path = Paths.get("test.txt");
+			Files.writeString(path, "Hello Files");
+			System.out.println("파일 저장 완료!!");
+		} catch(Exception e) {
+			
+			e.printStackTrace();
+		}*/
+		// 3. 파일 읽기
+		/*try {
+			Path path = Paths.get("c:\\java_data\\genie.txt");
+			String data = Files.readString(path);
+			System.out.println(data);
+		} catch(Exception e) {
+			e.printStackTrace();
+		}*/
+		// 4. 존재 여부
+		
+		/*try {
+			Path path = Paths.get("c:\\java_data\\genie.txt");
+			if(Files.exists(path)) {
+				System.out.println("파일이 존재합니다");
+			} else {
+				System.out.println("파일이 없습니다");
+				Files.createFile(path);
+				System.out.println("파일 생성 완료");
+			}
+		} catch(Exception e) {
+			e.printStackTrace();
+		}*/
+		// 5. 파일 복사
+		/*try {
+			Path source = Paths.get("test.txt");
+			Path target = Paths.get("copy.txt");
+			
+			Files.copy(source, target);
+			System.out.println("복사 완료");
+		} catch(Exception e) {
+			e.printStackTrace();
+		}*/
+		// 6. 파일 이동
+		/*try {
+			
+			Path source = Paths.get("copy.txt");
+			Path target = Paths.get("new.txt");
+			Files.move(source, target);
+			System.out.println("이동 완료 / 이름 변경");
+		} catch(Exception e) {
+			e.printStackTrace();
+		}*/
+		// 7. 파일 삭제
+		try {
+			Path path = Paths.get("test.txt");
+			Files.deleteIfExists(path);
+			System.out.println("삭제 완료");
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+	}
 
 }
