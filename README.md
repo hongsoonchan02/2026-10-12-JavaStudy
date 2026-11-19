@@ -1662,8 +1662,10 @@ fos.close();
 - 주요 메소드 : write(), close()
 
 #### FileInputStream
+
 - 파일을 1byte씩 읽는다. 파일 끝에 도달하면 -1을 반환한다.
 - 1byte씩 읽기 때문에 한글은 깨진다.
+
 ```java
 int data;
 while ((data = fis.read()) != -1) {
@@ -1677,6 +1679,7 @@ while ((data = fis.read()) != -1) {
 #### FilReader
 
 - 문자 단위로 처리하는 스트림이다.
+
 ```java
 FileWriter fw = new FileWriter("memo.txt");
 fw.write("안녕하세요!\n");
@@ -1684,12 +1687,13 @@ fw.close();
 ```
 - 주요 메소드 : write(), read()
 
-### 한줄씩 읽기
+### 한줄씩 읽기 / 쓰기
 ------
 #### BufferedReader
 
 - 버퍼를 사용해서 빠르게 읽고, readLine()으로 한줄 단위로 읽을 수 있다.
 - 파일 끝에 도달하면 -1이 아닌 null을 반환한다.
+
 ```java
 BufferedReader br = new BufferedReader(new FileReader("memo.txt"));
 String line;
@@ -1697,4 +1701,81 @@ while ((line = br.readLine()) != null) {
     System.out.println(line);
 }
 ```
+- 주요 메소드 : readLine(), close()
+
+#### BufferedWriter
+
+- 글자를 파일에 저장하는 스트림이다. 버퍼에 모아뒀다가 한꺼번에 쓰기 때문에 빠르다.
+
+```java
+BufferedWriter bw = new BufferedWriter(new FileWriter("test.txt"));
+bw.write("안녕하세요");
+bw.newLine();          // 줄바꿈
+bw.write("자바 공부");
+bw.close();
+```
+- 주요 메소드 : write(), newLine(), close()
+
+### 바이트 읽기 / 쓰기
+-----
+#### BufferedInputStream
+
+- 이미지나 음악 같은 바이트 데이터를 빠르게 읽는다.
+
+```java
+BufferedInputStream bis = new BufferedInputStream(new FileInputStream("image.jpg"));
+byte[] buf = new byte[1024];
+int len = bis.read(buf);   // 최대 1024바이트를 읽고, 실제로 읽은 개수를 반환
+```
+- 주요 메소드 : read(), read(byte[]), close()
+- read(byte[])는 배열 크기만큼 한번에 읽어서 빠르다. 파일 끝에는 -1을 반환한다.
+
+#### BufferedOutputStream
+
+- 바이트 데이터를 파일에 저장한다. 파일을 복사할 때 많이 사용한다.
+
+```java
+int len;
+while ((len = bis.read(buf)) != -1) {
+    bos.write(buf, 0, len);   // 실제로 읽은 만큼만 쓰기
+}
+bos.flush();
+```
+- 주요 메소드 : write(). flush(), close()
+
+### 객체 저장 / 읽기
+--------
+#### ObjectOutputStream
+
+- 자바 객체를 통째로 파일에 저장한다. (직렬화)
+
+```java
+ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("data.dat"));
+oos.writeObject(student);
+```
+- 주요 메소드 : writeObject(), flush(), close()
+- 저장할 클래스는 반드시 implements Serializable을 붙여야한다.
+
+#### ObjectInputStream
+
+- 파일에 저장된 객체를 다시 읽어온다. (역직렬화)
+```java
+ObjectInputStream ois = new ObjectInputStream(new FileInputStream("data.dat"));
+Student s = (Student) ois.readObject();
+```
+- 주요 메소드 : readObject(), close()
+
+### 파일 관리
+-----
+#### Files
+
+-  파일과 폴더를 다루는 유틸리티 클래스이다. 스트림을 직접 열고 닫지 않아도 된다.
+
+```java
+Path path = Path.of("test.txt");
+Files.writeString(path, "자바 Files 공부");
+String data = Files.readString(path);
+```
+- 주요 메소드 : exists(), createFile(), copy(), move(), delete(), readString(), writeStrins()
+
 </details>
