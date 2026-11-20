@@ -11,6 +11,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
@@ -56,6 +57,7 @@ public class ChatMain extends JFrame implements ActionListener, Runnable {
 	JTextField tf;
 	JButton b1, b2;
 	String name;
+	JScrollBar bar;
 	///////// 네트워크 연결 관련
 	Socket s; // 서버와 연결되는 기기
 	BufferedReader in; // 서버에서 응답한 값 읽기
@@ -77,6 +79,7 @@ public class ChatMain extends JFrame implements ActionListener, Runnable {
 		ta = new JTextArea();
 		ta.setEditable(false);
 		JScrollPane js = new JScrollPane(ta);
+		bar = js.getVerticalScrollBar();
 		tf = new JTextField(25);
 		b1 = new JButton("접속");
 		b2 = new JButton("종료");
@@ -90,11 +93,13 @@ public class ChatMain extends JFrame implements ActionListener, Runnable {
 		add("South", p);
 		
 		setSize(450, 400);
-		setVisible(true);
+//		setVisible(true);
 		
 		b1.addActionListener(this);
 		b2.addActionListener(this);
 		tf.addActionListener(this); // Enter
+		
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
 	}
 	public static void main(String[] args) {
 		
@@ -160,6 +165,7 @@ public class ChatMain extends JFrame implements ActionListener, Runnable {
 				String msg = in.readLine();
 				// 받은 값을 TextArea에 출력
 				ta.append(msg + "\n");
+				bar.setValue(bar.getMaximum());
 			}
 		} catch(Exception e) {
 			
